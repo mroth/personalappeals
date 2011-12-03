@@ -5,10 +5,13 @@ model CONTENDERS
  - fullname:string (for display)
  - wins:int
  - loses:int
+ has_many :battles
 
 model BATTLE
  - winner
  - loser
+ belongs_to :winner, :class_name => 'Contender', :foreign_key => "winner_id"
+ belongs_to :loser, :class_name => 'Contender', :foreign_key => "winner_id"
  - voter?
  
  
