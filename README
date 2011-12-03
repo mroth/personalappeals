@@ -1,17 +1,11 @@
 Vote on wikipedia solicitors.
 
-model CONTENDERS
- - uname:string (key files off this)
- - fullname:string (for display)
- - wins:int
- - loses:int
- has_many :battles
+## TODO
 
-model BATTLE
- - winner
- - loser
- belongs_to :winner, :class_name => 'Contender', :foreign_key => "winner_id"
- belongs_to :loser, :class_name => 'Contender', :foreign_key => "loser_id"
- - voter?
+Before production:
+ - goog analytics
+ - page caching
+ - tweet button with bitly link and revised text
+ - hat promo
  
  
