@@ -1,4 +1,6 @@
 Personalappeal::Application.routes.draw do
+  resources :battles
+
   resources :contenders
 
   # The priority is based upon order of creation:

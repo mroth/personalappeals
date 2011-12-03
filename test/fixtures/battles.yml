@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  winner_id: 1
+  loser_id: 1
+  voter: MyString
+
+two:
+  winner_id: 1
+  loser_id: 1
+  voter: MyString

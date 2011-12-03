@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Winner:</b>
+  <%= @battle.winner_id %>
+</p>
+
+<p>
+  <b>Loser:</b>
+  <%= @battle.loser_id %>
+</p>
+
+<p>
+  <b>Voter:</b>
+  <%= @battle.voter %>
+</p>
+
+
+<%= link_to 'Edit', edit_battle_path(@battle) %> |
+<%= link_to 'Back', battles_path %>

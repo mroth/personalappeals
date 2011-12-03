@@ -11,7 +11,15 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111203184826) do
+ActiveRecord::Schema.define(:version => 20111203200206) do
+
+  create_table "battles", :force => true do |t|
+    t.integer  "winner_id"
+    t.integer  "loser_id"
+    t.string   "voter"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "contenders", :force => true do |t|
     t.string   "uname"
