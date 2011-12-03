@@ -1,0 +1,9 @@
+<%= form_for(@battle) do |f| %>
+  <%= f.hidden_field(:winner_id, :value => winner.id) %>
+  <%= f.hidden_field(:loser_id, :value => loser.id) %>
+  <%= hidden_field_tag(:winner_uname, winner.uname) %>
+  <%= hidden_field_tag(:loser_uname, loser.uname) %>
+  <!-- <%= image_tag winner.banner, :width => 640 %> -->
+  <%= image_submit_tag winner.banner, :class => 'bannerimg' %>
+  <!-- <%= f.submit "vote!", :class => 'btn primary' %> -->
+<% end %>

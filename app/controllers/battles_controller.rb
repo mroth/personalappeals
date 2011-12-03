@@ -43,10 +43,12 @@ class BattlesController < ApplicationController
   # POST /battles.json
   def create
     @battle = Battle.new(params[:battle])
+    @battle.voter = request.remote_ip
 
     respond_to do |format|
       if @battle.save
-        format.html { redirect_to @battle, notice: 'Battle was successfully created.' }
+        # format.html { redirect_to new_battle_url, notice: 'Battle was successfully created.' }
+        format.html { redirect_to new_battle_url, flash: {:last_battle_id => @battle.id, :last_winner_id => @battle.winner_id, :last_loser_id => @battle.loser_id} }
         format.json { render json: @battle, status: :created, location: @battle }
       else
         format.html { render action: "new" }

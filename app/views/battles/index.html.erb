@@ -12,9 +12,9 @@
 
 <% @battles.each do |battle| %>
   <tr>
-    <td><%= battle.winner_id %></td>
-    <td><%= battle.loser_id %></td>
-    <td><%= battle.voter %></td>
+    <td><%= battle.winner.uname %></td>
+    <td><%= battle.loser.uname %></td>
+    <td><code><%= battle.voter %></code></td>
     <td><%= link_to 'Show', battle %></td>
     <td><%= link_to 'Edit', edit_battle_path(battle) %></td>
     <td><%= link_to 'Destroy', battle, confirm: 'Are you sure?', method: :delete %></td>
@@ -24,4 +24,4 @@
 
 <br />
 
-<%= link_to 'New Battle', new_battle_path %>
+<%= link_to 'New Battle', new_battle_path, :class => 'btn' %>

@@ -3,25 +3,38 @@
 <div class="row">  
   <div class="span12" align="center">
     <br/>
-    <%= image_tag @contenders[0].banner, :width => 640 %>
+    <%= render :partial => 'bannerform', :locals => { :winner => @contenders[0], :loser => @contenders[1] } %>
+
     <br/>
     <h3>OR</h3>
     <br/>
-    <%= image_tag @contenders[1].banner, :width => 640 %>
+    
+    <%= render :partial => 'bannerform', :locals => { :winner => @contenders[1], :loser => @contenders[0] } %>
     
     <p><span class="label success">Click to cast your vote!</span></p>
   </div>
+  
   <div class="span4">
-    <div class="alert-message block-message warning">
-      <p><strong>sidenote</strong> with results of your last vote</p>
-      <div class="alert-actions">
-        <a class="btn small" href="#">Do something</a>
+    
+    <% if !flash[:last_battle_id].nil? %>
+      <% @last_winner = Contender.find( flash[:last_winner_id] ) %>
+      <% @last_loser = Contender.find( flash[:last_loser_id] ) %>
+      
+      <div class="alert-message block-message warning">
+        <p><strong>sidenote</strong> with results of your last vote</p>
+        <ul>
+          <li>winner: <%= @last_winner.uname  %>, <%= @last_winner.wins %> wins</li>
+          <li>loser: <%=  @last_loser.uname %>, <%= @last_loser.wins %> wins</li>
+        </ul>
+        <div class="alert-actions">
+          <a class="btn small" href="#">Do something</a>
+        </div>
       </div>
-    </div>
+    <% end %>
+    
   </div>
+  
 </div>
 
-
-<!-- <%= render 'form' %> -->
 
 <!-- <%= link_to 'Back', battles_path %> -->
