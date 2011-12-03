@@ -1,0 +1,33 @@
+<%= form_for(@contender) do |f| %>
+  <% if @contender.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@contender.errors.count, "error") %> prohibited this contender from being saved:</h2>
+
+      <ul>
+      <% @contender.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :uname %><br />
+    <%= f.text_field :uname %>
+  </div>
+  <div class="field">
+    <%= f.label :fullname %><br />
+    <%= f.text_field :fullname %>
+  </div>
+  <div class="field">
+    <%= f.label :wins %><br />
+    <%= f.text_field :wins %>
+  </div>
+  <div class="field">
+    <%= f.label :loses %><br />
+    <%= f.text_field :loses %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

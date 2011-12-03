@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Uname:</b>
+  <%= @contender.uname %>
+</p>
+
+<p>
+  <b>Fullname:</b>
+  <%= @contender.fullname %>
+</p>
+
+<p>
+  <b>Wins:</b>
+  <%= @contender.wins %>
+</p>
+
+<p>
+  <b>Loses:</b>
+  <%= @contender.loses %>
+</p>
+
+
+<%= link_to 'Edit', edit_contender_path(@contender) %> |
+<%= link_to 'Back', contenders_path %>

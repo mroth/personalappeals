@@ -1,0 +1,29 @@
+<h1>Listing contenders</h1>
+
+<table>
+  <tr>
+    <th>Uname</th>
+    <th>Fullname</th>
+    <th>Wins</th>
+    <th>Loses</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @contenders.each do |contender| %>
+  <tr>
+    <td><%= contender.uname %></td>
+    <td><%= contender.fullname %></td>
+    <td><%= contender.wins %></td>
+    <td><%= contender.loses %></td>
+    <td><%= link_to 'Show', contender %></td>
+    <td><%= link_to 'Edit', edit_contender_path(contender) %></td>
+    <td><%= link_to 'Destroy', contender, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Contender', new_contender_path %>
