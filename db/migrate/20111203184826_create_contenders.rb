@@ -3,8 +3,8 @@ class CreateContenders < ActiveRecord::Migration
     create_table :contenders do |t|
       t.string :uname
       t.string :fullname
-      t.int :wins
-      t.int :loses
+      t.integer :wins
+      t.integer :loses
 
       t.timestamps
     end
