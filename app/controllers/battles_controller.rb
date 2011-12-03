@@ -25,6 +25,8 @@ class BattlesController < ApplicationController
   # GET /battles/new.json
   def new
     @battle = Battle.new
+    # the below should work in both sqlite and pg via http://oldwiki.rubyonrails.org/rails/pages/HowtoSelectRandomRecords
+    @contenders = Contender.find(:all, :order => 'RANDOM()', :limit => 2)
 
     respond_to do |format|
       format.html # new.html.erb

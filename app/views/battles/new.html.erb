@@ -1,5 +1,27 @@
-<h1>New battle</h1>
+<h2>Who has more personal appeal?</h2>
 
-<%= render 'form' %>
+<div class="row">  
+  <div class="span12" align="center">
+    <br/>
+    <%= image_tag @contenders[0].banner, :width => 640 %>
+    <br/>
+    <h3>OR</h3>
+    <br/>
+    <%= image_tag @contenders[1].banner, :width => 640 %>
+    
+    <p><span class="label success">Click to cast your vote!</span></p>
+  </div>
+  <div class="span4">
+    <div class="alert-message block-message warning">
+      <p><strong>sidenote</strong> with results of your last vote</p>
+      <div class="alert-actions">
+        <a class="btn small" href="#">Do something</a>
+      </div>
+    </div>
+  </div>
+</div>
 
-<%= link_to 'Back', battles_path %>
+
+<!-- <%= render 'form' %> -->
+
+<!-- <%= link_to 'Back', battles_path %> -->
