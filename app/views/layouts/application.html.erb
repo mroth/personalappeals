@@ -1,14 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Personalappeal</title>
+  <title>Personal Appeal</title>
+  <link rel="stylesheet" href="http://twitter.github.com/bootstrap/1.4.0/bootstrap.min.css">
   <%= stylesheet_link_tag    "application" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
-<%= yield %>
+<div class="container">
+  <div class="page-header">
+    <h1 style="color: navy;">Personal Appeals <small>Hot or Not of the Wikipedia solicitors</small></h1>
+  </div>
+  
+  <ul class="tabs">
+    <li><a href="#">Vote</a></li>
+    <li><a href="#">Rankings</a></li>
+  </ul>
+
+  <%= yield %>
+
+</div>
 
 </body>
 </html>

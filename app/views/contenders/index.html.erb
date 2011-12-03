@@ -1,29 +1,29 @@
-<h1>Listing contenders</h1>
+<h2>Listing contenders</h2>
 
 <table>
   <tr>
     <th>Headshot</th>
-    <th>Uname</th>
-    <th>Fullname</th>
+    <!-- <th>Uname</th> -->
+    <th>Name</th>
     <th>Wins</th>
     <th>Loses</th>
-    <th>Banner</th>
+    <!-- <th>Banner</th> -->
+    <!-- <th></th>
     <th></th>
-    <th></th>
-    <th></th>
+    <th></th> -->
   </tr>
 
 <% @contenders.each do |contender| %>
   <tr>
     <td><%= image_tag contender.headshot, :width => '75' %></td>
-    <td><%= contender.uname %></td>
+    <!-- <td><%= contender.uname %></td> -->
     <td><%= contender.fullname %></td>
     <td><%= contender.wins %></td>
     <td><%= contender.loses %></td>
-    <td><%= image_tag contender.banner, :width => '400' %></td>
-    <td><%= link_to 'Show', contender %></td>
-    <td><%= link_to 'Edit', edit_contender_path(contender) %></td>
-    <td><%= link_to 'Destroy', contender, confirm: 'Are you sure?', method: :delete %></td>
+    <!-- <td><%= image_tag contender.banner, :width => '400' %></td> -->
+    <!-- <td><%= link_to 'Show', contender %></td>
+        <td><%= link_to 'Edit', edit_contender_path(contender) %></td>
+        <td><%= link_to 'Destroy', contender, confirm: 'Are you sure?', method: :delete %></td> -->
   </tr>
 <% end %>
 </table>
