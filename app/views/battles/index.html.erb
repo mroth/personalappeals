@@ -1,7 +1,8 @@
-<h1>Listing battles</h1>
+<h1>Most recent battles</h1>
 
 <table>
   <tr>
+    <th>ID</th>
     <th>Winner</th>
     <th>Loser</th>
     <th>Voter</th>
@@ -12,6 +13,7 @@
 
 <% @battles.each do |battle| %>
   <tr>
+    <td><%= battle.id %></td>
     <td><%= battle.winner.uname %></td>
     <td><%= battle.loser.uname %></td>
     <td><code><%= battle.voter %></code></td>

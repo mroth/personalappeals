@@ -2,7 +2,7 @@ class BattlesController < ApplicationController
   # GET /battles
   # GET /battles.json
   def index
-    @battles = Battle.all
+    @battles = Battle.order('id DESC').limit(100)
 
     respond_to do |format|
       format.html # index.html.erb
