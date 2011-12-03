@@ -7,5 +7,6 @@ Before production:
  - page caching
  - tweet button with bitly link and revised text
  - hat promo
- 
+ - lock down security of methods
+ - model validation (not nulls)
  

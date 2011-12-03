@@ -9,5 +9,16 @@ class Contender < ActiveRecord::Base
   def headshot
     "headshots/#{uname}.jpg"
   end
+  
+  def ratio
+    if wins == 0
+      ratio = 0
+    elif loses == 0
+      ratio = 100
+    else
+      ratio = wins.to_f / (wins+loses)
+    end
+    return ratio
+  end
 
 end

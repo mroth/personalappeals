@@ -23,8 +23,8 @@
       <div class="alert-message block-message warning">
         <p><strong>sidenote</strong> with results of your last vote</p>
         <ul>
-          <li>winner: <%= @last_winner.uname  %>, <%= @last_winner.wins %> wins</li>
-          <li>loser: <%=  @last_loser.uname %>, <%= @last_loser.wins %> wins</li>
+          <li>winner: <%= @last_winner.uname  %>, <%= @last_winner.wins %> wins (<%= number_to_percentage @last_winner.ratio * 100, :precision => 0 %>)</li>
+          <li>loser: <%=  @last_loser.uname %>, <%= @last_loser.wins %> wins (<%= number_to_percentage @last_loser.ratio * 100, :precision => 0 %>)</li>
         </ul>
         <div class="alert-actions">
           <a class="btn small" href="#">Do something</a>
