@@ -16,8 +16,8 @@ ActiveRecord::Schema.define(:version => 20111203184826) do
   create_table "contenders", :force => true do |t|
     t.string   "uname"
     t.string   "fullname"
-    t.integer  "wins"
-    t.integer  "loses"
+    t.integer  "wins",       :default => 0
+    t.integer  "loses",      :default => 0
     t.datetime "created_at"
     t.datetime "updated_at"
   end
