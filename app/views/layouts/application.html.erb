@@ -15,8 +15,8 @@
   </div>
   
   <ul class="tabs">
-    <li><a href="#">Vote</a></li>
-    <li><a href="#">Rankings</a></li>
+    <li <%= controller.controller_name == 'battles' ? "class='active'" : "" -%>><a href="#">Vote</a></li>
+    <li <%= controller.controller_name == 'contenders' ? "class='active'" : "" -%>><a href="#">Rankings</a></li>
   </ul>
 
   <%= yield %>
