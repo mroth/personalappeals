@@ -1,6 +1,6 @@
 class Contender < ActiveRecord::Base
-  has_many :winning_battles, :class_name => 'Battle', :foreign_key => 'winner_id'#, :counter_cache => :wins
-  has_many :losing_battles, :class_name => 'Battle', :foreign_key => 'loser_id'#, :counter_cache => :loses
+  has_many :winning_battles, :class_name => 'Battle', :foreign_key => 'winner_id'
+  has_many :losing_battles, :class_name => 'Battle', :foreign_key => 'loser_id'
 
   def banner
     "banners/#{uname}.png"
