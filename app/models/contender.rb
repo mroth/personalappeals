@@ -13,7 +13,7 @@ class Contender < ActiveRecord::Base
   def ratio
     if wins == 0
       ratio = 0
-    elif loses == 0
+    elsif loses == 0
       ratio = 100
     else
       ratio = wins.to_f / (wins+loses)
