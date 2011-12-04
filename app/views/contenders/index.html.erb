@@ -7,6 +7,7 @@
     <th>Name</th>
     <th>Wins</th>
     <th>Loses</th>
+    <th>Ratio</th>
     <!-- <th>Banner</th> -->
     <!-- <th></th>
     <th></th>
@@ -20,6 +21,7 @@
     <td><%= contender.fullname %></td>
     <td><%= contender.wins %></td>
     <td><%= contender.loses %></td>
+    <td><%= sprintf( "%0.02f", contender.ratio ) %></td>
     <!-- <td><%= image_tag contender.banner, :width => '400' %></td> -->
     <!-- <td><%= link_to 'Show', contender %></td>
         <td><%= link_to 'Edit', edit_contender_path(contender) %></td>
