@@ -1,6 +1,5 @@
 Personalappeal::Application.routes.draw do
   resources :battles
-
   resources :contenders
 
   # The priority is based upon order of creation:
@@ -52,7 +51,7 @@ Personalappeal::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  # root :to => 'welcome#index'
+  root :to => 'battles#new'
 
   # See how all your routes lay out with "rake routes"
 
