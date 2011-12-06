@@ -14,15 +14,15 @@
 ActiveRecord::Schema.define(:version => 20111203200206) do
 
   create_table "battles", :force => true do |t|
-    t.integer  "winner_id"
-    t.integer  "loser_id"
+    t.integer  "winner_id",  :null => false
+    t.integer  "loser_id",   :null => false
     t.string   "voter"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "contenders", :force => true do |t|
-    t.string   "uname"
+    t.string   "uname",                     :null => false
     t.string   "fullname"
     t.integer  "wins",       :default => 0
     t.integer  "loses",      :default => 0
