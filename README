@@ -9,4 +9,5 @@ Before production:
  - hat promo
  - lock down security of methods
  - model validation (not nulls) √
+ - make Contender lookup/randomization more efficient? (in memory versus postgres?)
  
