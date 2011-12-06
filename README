@@ -3,7 +3,7 @@ Vote on wikipedia solicitors.
 ## TODO
 
 Before production:
- - goog analytics
+ - goog analytics √
  - page caching
  - tweet button with bitly link and revised text
  - hat promo
