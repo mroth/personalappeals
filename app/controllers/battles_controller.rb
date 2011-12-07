@@ -27,11 +27,13 @@ class BattlesController < ApplicationController
     @battle = Battle.new
     # the below should work in both sqlite and pg via http://oldwiki.rubyonrails.org/rails/pages/HowtoSelectRandomRecords
     # but going to try doing this in memory instead of relying on a potentially flakey shared DB
+    # also, small set so just load em all in case we need values for a given user.
     #@contenders = Contender.find(:all, :order => 'RANDOM()', :limit => 2)
     @contenders = Contender.all
     @contenders.shuffle!
     
     # get the contenders needed for sidebar
+    # TODO: the following appear to generate new DB calls -- since I have the entire contenders array in memory not needed? but how to query? 
     if !flash[:last_battle_id].nil?
       @last_winner = Contender.find( flash[:last_winner_id] )
       @last_loser = Contender.find( flash[:last_loser_id] )
