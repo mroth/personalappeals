@@ -17,8 +17,6 @@
   <div class="span4">
     
     <% if !flash[:last_battle_id].nil? %>
-      <% @last_winner = Contender.find( flash[:last_winner_id] ) %>
-      <% @last_loser = Contender.find( flash[:last_loser_id] ) %>
       
       <div class="alert-message block-message warning">
         <p><strong>sidenote</strong> with results of your last vote</p>

@@ -26,7 +26,16 @@ class BattlesController < ApplicationController
   def new
     @battle = Battle.new
     # the below should work in both sqlite and pg via http://oldwiki.rubyonrails.org/rails/pages/HowtoSelectRandomRecords
-    @contenders = Contender.find(:all, :order => 'RANDOM()', :limit => 2)
+    # but going to try doing this in memory instead of relying on a potentially flakey shared DB
+    #@contenders = Contender.find(:all, :order => 'RANDOM()', :limit => 2)
+    @contenders = Contender.all
+    @contenders.shuffle!
+    
+    # get the contenders needed for sidebar
+    if !flash[:last_battle_id].nil?
+      @last_winner = Contender.find( flash[:last_winner_id] )
+      @last_loser = Contender.find( flash[:last_loser_id] )
+    end
 
     respond_to do |format|
       format.html # new.html.erb
