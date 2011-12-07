@@ -1,4 +1,6 @@
 class BattlesController < ApplicationController
+  before_filter :restrict_to_development, :only => [:edit, :update, :destroy]
+  
   # GET /battles
   # GET /battles.json
   def index

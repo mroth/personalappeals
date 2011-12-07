@@ -1,4 +1,6 @@
 class ContendersController < ApplicationController
+  before_filter :restrict_to_development, :except => [:index, :show]
+  
   # GET /contenders
   # GET /contenders.json
   def index
