@@ -3,6 +3,7 @@ Vote on wikipedia solicitors.
 ## TODO
 
 Before production:
+
  - goog analytics √
  - page caching
  - tweet button with bitly link and revised text
@@ -11,3 +12,17 @@ Before production:
  - model validation (not nulls) √
  - make Contender lookup/randomization more efficient? (in memory versus postgres?)
  
+ 
+## TO RUN LOCALLY
+ 
+(E.g. instructions for collaborators.)
+ 
+To get going, after cloning the repo do the following:
+ 
+    bundle install  #get all needed gems and versions of rails up and going
+    rake db:migrate #set up the local db
+    rake db:seed    #load in the seed data to db (e.g. the contenders)
+
+To run locally, use `foreman start`.
+
+The contenders are stored in `/db/seeds.rb`.  I'm lazy and just use `uname` as the unique key for the filenames for the associated images for a contender.
