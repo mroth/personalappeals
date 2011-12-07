@@ -6,8 +6,8 @@ Before production:
  - goog analytics √
  - page caching
  - tweet button with bitly link and revised text
- - hat promo
- - lock down security of methods
+ - hat promo √ (looks ghetto but there)
+ - lock down security of methods √
  - model validation (not nulls) √
  - make Contender lookup/randomization more efficient? (in memory versus postgres?)
  
