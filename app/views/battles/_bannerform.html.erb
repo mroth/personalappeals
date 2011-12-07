@@ -3,5 +3,5 @@
   <%= f.hidden_field(:loser_id, :value => loser.id) %>
   <%= hidden_field_tag(:winner_uname, winner.uname) %>
   <%= hidden_field_tag(:loser_uname, loser.uname) %>
-  <%= image_submit_tag winner.banner, :class => 'bannerimg' %>
+  <%= image_submit_tag winner.banner, :class => 'bannerimg', :title => "Vote for #{winner.uname}" %>
 <% end %>
