@@ -1,6 +1,7 @@
 <h2>Listing contenders</h2>
 
-<table>
+<table id="rankings">
+  <thead>
   <tr>
     <th>Headshot</th>
     <!-- <th>Uname</th> -->
@@ -13,7 +14,9 @@
     <th></th>
     <th></th> -->
   </tr>
-
+  </thead>
+  
+  <tbody>
 <% @contenders.each do |contender| %>
   <tr>
     <td><%= image_tag contender.headshot, :width => '75' %></td>
@@ -28,4 +31,18 @@
         <td><%= link_to 'Destroy', contender, confirm: 'Are you sure?', method: :delete %></td> -->
   </tr>
 <% end %>
+  </tbody>
 </table>
+
+<script>
+$(function() {
+    $("table#rankings").tablesorter(
+      { 
+        sortList: [[4,1]],
+        headers: {
+          0: { sorter: false }
+        }
+      }
+    );
+});
+</script>
