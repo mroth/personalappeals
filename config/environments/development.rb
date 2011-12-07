@@ -27,4 +27,7 @@ Personalappeal::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
+  
+  # get rid of super annoying assets debug lines (doesn't work?)
+  config.assets.logger = nil
 end
