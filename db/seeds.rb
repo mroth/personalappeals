@@ -15,6 +15,9 @@ Contender.create( [
                     {uname: 'Ryan',     fullname: 'Ryan Lane'},         #wikipedia programmer
                     {uname: 'Sarah',    fullname: 'Sarah'},             #author of 159 articles
                     {uname: 'Stephen',  fullname: 'Stephen'},           #author of 191 articles
-                    {uname: 'Susan',    fullname: 'Susan'}              #author of 549 articles
+                    {uname: 'Susan',    fullname: 'Susan'},              #author of 549 articles
+                    {uname: 'Student',   fullname: 'Unknown name student'},
+                    {uname: 'Sengai',   fullname: 'Dr. Sengai Podhuvan'}, #wikipedia author
+                    {uname: 'Maryana',  fullname: 'Maryana Pinchuk'}      #wikipedia researcher
                   ]
                 )
