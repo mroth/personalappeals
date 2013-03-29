@@ -1,9 +1,8 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.1.10'
+gem 'rails', '~> 3.1.10'
 gem 'foreman'
 gem 'thin'
-gem 'newrelic_rpm'
 
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
@@ -12,6 +11,7 @@ group :development do
   gem 'sqlite3'
 end
 group :production do
+  gem 'newrelic_rpm'
   gem 'pg'
 end
 
